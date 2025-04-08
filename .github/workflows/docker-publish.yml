@@ -6,6 +6,11 @@ name: Docker
 # documentation.
 
 on:
+  workflow_run:
+    workflows: [app test]
+    types:
+      - completed
+    
   schedule:
     - cron: '26 5 * * *'
   push:
@@ -44,6 +49,8 @@ jobs:
         uses: sigstore/cosign-installer@59acb6260d9c0ba8f4a2f9d9b48431a222b68e20 #v3.5.0
         with:
           cosign-release: 'v2.2.4'
+          context: .
+          platforms: linux/amd64,linux/arm64/v8
 
       # Set up BuildKit Docker container builder to be able to build
       # multi-platform images and export cache

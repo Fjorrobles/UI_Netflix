@@ -12,7 +12,7 @@ class Test(TestCase):
         find out more about how to test streamlit apps:
         https://docs.streamlit.io/library/api-reference/app-testing
         """
-        at = AppTest.from_file("/Users/fjorrobles/Desktop/Folder/UI_Netflix/app/mainpage.py")
+        at = AppTest.from_file("/app/mainpage.py")
         at.run()
 
         assert at.markdown[0].value == "# Netflix Shows 🎥"

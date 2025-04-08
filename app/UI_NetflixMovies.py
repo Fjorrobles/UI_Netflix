@@ -34,12 +34,12 @@ if data:
     st.data_editor(
         data,
         column_config={
-            "Movie Poster":
+            "image_url":
             st.column_config.ImageColumn(label=None, width="large")
         },
         row_height=180,
     )
-    st.image("https://about.netflix.com/images/meta/netflix-symbol-black.png")
-    st.image("https://images.ctfassets.net/4cd45et68cgf/7LrExJ6PAj6MSIPkDyCO86/542b1dfabbf3959908f69be546879952/Netflix-Brand-Logo.png?w=700&h=456")
+    #st.image("https://about.netflix.com/images/meta/netflix-symbol-black.png")
+    #st.image("https://images.ctfassets.net/4cd45et68cgf/7LrExJ6PAj6MSIPkDyCO86/542b1dfabbf3959908f69be546879952/Netflix-Brand-Logo.png?w=700&h=456")
 else:
     st.write("No data available to display.")

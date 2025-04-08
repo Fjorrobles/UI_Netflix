@@ -31,11 +31,6 @@ def web_scraper2():
         # Extracting all 'img' tags for images
         img_tags = soup.find_all('img')
         img_urls = [img['src'] for img in img_tags if 'src' in img.attrs]
-        
-      
-        
-        # Skip first three elements of data from webpage
-        #data = data[3:784]
 
         # Combine the scraped names and image URLs
         for i in range(len(data)):

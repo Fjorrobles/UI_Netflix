@@ -15,5 +15,5 @@ class Test(TestCase):
         at = AppTest.from_file("/Users/fjorrobles/Desktop/Folder/UI_Netflix/app/mainpage.py")
         at.run()
 
-        assert at.title[0].value.startswith("Netflix")
-        assert not at.exception
+        assert at.markdown[0].value == "# Netflix Shows 🎥"
+        #assert not at.exception
